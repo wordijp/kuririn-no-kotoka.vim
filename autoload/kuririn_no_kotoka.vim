@@ -179,7 +179,7 @@ function! s:play(wav_file) abort
   return ''
 endfunction
 
-" pidの終了を待つ
+" pidのプロセスは終了してるか?
 function! s:exit_check(pid) abort
   if a:pid != ''
     let [cond, status] = s:S('autoload/vimproc.vim:libcall', 'vp_waitpid', [a:pid])
